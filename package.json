@@ -1,0 +1,16 @@
+{
+  "name": "dune-mcp-server",
+  "version": "0.0.1",
+  "description": "Dune Analytics MCP Server",
+  "type": "module",
+  "scripts": {
+    "start": "bun src/index.ts stdio",
+    "dev": "bun --watch src/index.ts stdio",
+    "build": "bun build src/index.ts --outdir dist",
+    "start:prod": "node dist/index.js stdio"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.10.2",
+    "axios": "^1.9.0"
+  }
+}
