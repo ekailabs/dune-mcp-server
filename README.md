@@ -133,6 +133,15 @@ On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
 - "Can you please plot the stake distribution of EigenDA operators?"
 - "How many stakers are there on EigenDA AVS"
 
+
+
+## Running evals
+
+The evals package loads an mcp client that then runs the index.ts file, so there is no need to rebuild between tests. You can load environment variables by prefixing the npx command. Full documentation can be found [here](https://www.mcpevals.io/docs).
+
+```bash
+OPENAI_API_KEY=your-key  npx mcp-eval src/evals/evals.ts src/core/tools.ts
+```
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
